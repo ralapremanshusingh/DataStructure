@@ -1,18 +1,28 @@
 import java.util.Scanner;
 public class LinearSearch {
-   
+    
+    Scanner sc1 = new Scanner(System.in);
         
     int[] takeArr(int[] b) {
-        Scanner sc1 = new Scanner(System.in);
         for(int i=0; i<b.length; i++)
             b[i]=sc1.nextInt();
         return b;
     }        
+
     void printArr(int[] d) {
         for(int i: d)
             System.out.print(i + " ");
         System.out.println();
         return;
+    }
+
+    boolean Searching(int[] arr, int j) {
+        for(int i=0; i<arr.length; i++)
+            if(j==arr[i]) {
+                System.out.println("Your searchabel Elements is index no : " + i);
+                return true;
+            }
+        return false;
     }
 
     
@@ -34,15 +44,8 @@ public class LinearSearch {
         System.out.print("Enter Searchable Element: ");
         int s=sc.nextInt();
         if(!ra.Searching(c, s))
-            System.out.println("Your searchable element is not found.");
+            System.out.println("Your searchable element is not exist.");
         sc.close();
     }
-    boolean Searching(int[] arr, int j) {
-        for(int i=0; i<arr.length; i++)
-            if(j==arr[i]) {
-                System.out.println("Your searchabel Elements is index no : " + i);
-                return true;
-            }
-        return false;
-    }
+    
 }
