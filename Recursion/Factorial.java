@@ -17,6 +17,8 @@ public class Factorial {
 
         System.out.println("Factorial is " + fact);
 
+        sc.close();
+
     }
 
     public static int factorial(int num) {
